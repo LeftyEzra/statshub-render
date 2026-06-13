@@ -275,7 +275,11 @@
                                         <article class="heading-component heading-component-simple">
                                         <div class="heading-component-inner">
                                             <h5 class="heading-component-title">Latest News</h5>
-                                            <a class="button button-xs button-gray-outline" href="{% url 'news-list' competition.slug   %}">See all News</a>
+                                            {% if competition.slug %}
+                                              <a class="button button-xs button-gray-outline" href="{% url 'news-list' competition.slug   %}">See all News</a>
+                                            {% else %}
+                                                <a href="#">News</a>
+                                            {% endif %}
                                         </div>
                                         </article>
                                         <div class="row row-20">
