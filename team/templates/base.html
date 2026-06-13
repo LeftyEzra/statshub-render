@@ -367,10 +367,30 @@
                 <ul class="nav-minimal-list">
                   <li class="active"><a href="{% url 'home' %}">Home</a></li>
                   <li  class=" disabled"><a href="#">Features</a></li>
-                  <li ><a href="{% url 'team-charts' competition.id %}">Statistics</a></li>
+                  {% if competition.slug %}
+                  <li ><a href="{% url 'team-charts' competition.slug %}">Statistics</a></li>
+                  {% else %}
+                  <li ><a href="">Statistics</a></li>
+                  {% endif %}
+
+                  {% if competition.slug %}
                   <li ><a href="{% url 'team-roster' competition.id %}">Team</a></li>
+                  {% else %}
+                  <li ><a href="">Team</a></li>
+                  {% endif %}
+
+                  {% if competition.slug %}
                   <li ><a href="{% url 'news-list' competition.id   %}">News</a></li>
+                  {% else %}
+                  <li ><a href="">Statistics</a></li>
+                  {% endif %}
+
+                  {% if competition.slug %}
                   <li ><a href="{% url 'grid-shop' %}">Shop</a></li>
+                  {% else %}
+                  <li ><a href="">Statistics</a></li>
+                  {% endif %}
+                  
                 </ul>
               </nav>
             </div>
