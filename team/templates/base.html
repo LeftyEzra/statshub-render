@@ -374,13 +374,13 @@
                   {% endif %}
 
                   {% if competition.slug %}
-                  <li ><a href="{% url 'team-roster' competition.id %}">Team</a></li>
+                  <li ><a href="{% url 'team-roster' competition.slug %}">Team</a></li>
                   {% else %}
                   <li ><a href="">Team</a></li>
                   {% endif %}
 
                   {% if competition.slug %}
-                  <li ><a href="{% url 'news-list' competition.id   %}">News</a></li>
+                  <li ><a href="{% url 'news-list' competition.slug   %}">News</a></li>
                   {% else %}
                   <li ><a href="">Statistics</a></li>
                   {% endif %}
