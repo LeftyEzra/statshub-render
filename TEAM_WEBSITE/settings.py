@@ -130,9 +130,13 @@ USE_TZ = True
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIECT_URL = "/"
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = ['static/'] # Add a static directory
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STORAGES = {
     "default": {
