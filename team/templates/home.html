@@ -533,7 +533,11 @@
                     <article class="heading-component">
                       <div class="heading-component-inner">
                         <h5 class="heading-component-title">Upcoming Match
-                        </h5><a class="button button-xs button-gray-outline" href="{% url 'game-schedule' competition.slug %}">Calendar</a>
+                          {% if competition.slug %}
+                            </h5><a class="button button-xs button-gray-outline" href="{% url 'game-schedule' competition.slug %}">Calendar</a>
+                          {% else %}
+                              </h5><a class="button button-xs button-gray-outline" href="">Calendar</a>
+                          {% endif %}
                       </div>
                     </article>
                     <!-- Game Result Bug-->
@@ -757,7 +761,11 @@
                       <article class="heading-component">
                         <div class="heading-component-inner">
                           <h5 class="heading-component-title">In the spotlight
-                          </h5><a class="button button-xs button-gray-outline" href="{% url 'news-list' competition.slug   %}">All news</a>
+                          {% if competition.slug %}
+                            </h5><a class="button button-xs button-gray-outline" href="{% url 'news-list' competition.slug   %}">Read More News</a>
+                          {% else %}
+                              </h5><a class="button button-xs button-gray-outline" href="">Read More News</a>
+                          {% endif %}
                         </div>
                       </article>
                       <!-- List Post Classic-->
@@ -788,9 +796,12 @@
                       <!-- Heading Component-->
                       <article class="heading-component">
                         <div class="heading-component-inner">
-                          <h5 class="heading-component-title">Standings
-                          </h5>
+                          <h5 class="heading-component-title">Standings</h5>
+                          {% if competition.slug %}
                           <a class="button button-xs button-gray-outline" href="{% url 'view-standing' competition.slug %}">Full Standings</a>
+                          {% else %}
+                          <a class="button button-xs button-gray-outline" href="">Full Standings</a>
+                          {% endif %}
                         </div>
                       </article>
                       <!-- Table team-->
