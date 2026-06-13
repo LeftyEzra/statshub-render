@@ -134,8 +134,14 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = ['static/'] # Add a static directory
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-#WhiteNoise stuff
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 MEDIA_URL = 'media/' #Path that serves files like photos, videos, mp3 and the likes...
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # This is the filesystem path to the directory conveying the media.
