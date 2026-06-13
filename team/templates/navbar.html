@@ -422,15 +422,28 @@
                                     {% endif %}
                                 </li>
                                 <li class="rd-dropdown-item">
+                                  {% if competition.slug %}
                                     <a class="rd-dropdown-link" href="{% url 'view-standing' competition.slug %}">Standings</a>
+                                  {% else %}
+                                    <a class="rd-dropdown-link" href="">Standings</a>
+                                  {% endif %}
                                 </li>
                                
                                 <li class="rd-dropdown-item">
+                                  {% if competition.slug %}
                                     <a class="rd-dropdown-link" href="{% url 'game-schedule' competition.slug %}">Game schedule</a>
+                                  {% else %}
+                                    <a class="rd-dropdown-link" href="">Game schedule</a>
+                                  {% endif %}  
                                 </li>
 
                                  <li class="rd-dropdown-item">
-                                    <a class="rd-dropdown-link" href="{% url 'team-charts' competition.slug %}">Last 5 Games</a>
+                                    {% if competition.slug %}
+                                      <a class="rd-dropdown-link" href="{% url 'team-charts' competition.slug %}">Last 5 Games</a>
+                                    {% else %}
+                                      <a class="rd-dropdown-link" href="">Last 5 Games</a>
+                                    {% endif %} 
+                                    
                                 </li>
                                 
                             </ul>
