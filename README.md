@@ -79,14 +79,21 @@ Open your browser and navigate to http://127.0.0.1:8000/.
 
 ## 📂 System Project Structure Overview
 
-TEAM_WEBSITE/             # Core Project Configuration Directory
- │── settings.py         # App configurations, Jazzmin themes & DB Routes
- │── urls.py             # Global URL patterns and control-deck routers
+```text
+TEAM_WEBSITE/
+├── settings.py          # App configurations, Jazzmin themes & DB Routes
+└── urls.py              # Global URL patterns and control-deck routers
+
 team/                    # Primary Sports Application Module (StatsHub Core)
- │── models.py           # Competition, Season, Team, and Opponent structural blueprints
+├── models.py            # Competition, Season, Team, and Opponent blueprints
+├── views.py             # Form validation & reverse redirect methods
+└── forms.py             # Form mappings for frontend registration
+
 store/                   # Elite Store Application Module
- │── models.py           # Product entries, pricing models, and inventory data
+└── models.py            # Product entries, pricing models, and inventory data
+
 services/                # Elite Services Application Module
- │── models.py           # Service trade listings, category tags, and orders
+└── models.py            # Service trade listings, category tags, and orders
+
 templates/               # Frontend Presentation Components
- │── competition_registration.html  # Custom submission layout with inline warning handlers
+└── competition_registration.html  # Custom layout with inline error loops
