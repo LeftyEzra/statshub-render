@@ -10,12 +10,12 @@ Teams often rely on manual paperwork or scattered tools to track performance and
 ### **Solution**
 StatsHub provides:
 - **Player Profiles**: Season‑long statistics stored and accessible anytime.  
-- **Coaching Analytics**: Real‑time team stats, shooting accuracy, efficiency dashboards.  
-- **Team Management**: Rosters, standings, and game logs in one hub.  
+- **Coaching Analytics**: Real‑time team stats, shooting accuracy, efficiency dashboards.
+- **Overall Performance Dashboard**: Summarizes team and player efficiency across the season.
+- **Shot Charts**: Visual tracking of shot locations and accuracy for each game.
+- **Team Management**: Rosters, standings(Displays team rankings, wins/losses, and points per game), and game logs in one hub.  
 - **Fan Engagement**: News, galleries, and highlights to connect with supporters.  
 - **Elite Store**: Integrated e‑commerce for selling official sports gear.  
-
----
 
 ### **Tech Stack**
 - **Backend**: Python, Django, PostgreSQL  
