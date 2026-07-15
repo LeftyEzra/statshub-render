@@ -1,7 +1,7 @@
-# StatsHub — Sports Analytics & Service Marketplace Platform
+# SoloTech — Sports Analytics & Service Marketplace Platform
 
 ### **Overview**
-StatsHub is a unified sports platform  designed and developed to help basketball teams manage performance data, engage fans, and grow their brand. It combines advanced analytics with an integrated **Elite Store** for merchandise sales, creating a complete ecosystem for players, coaches, and supporters.
+SoloTech is a unified sports platform  designed and developed to help basketball teams manage performance data, engage fans, and grow their brand. It combines advanced analytics with an integrated **Elite Store** for merchandise sales, creating a complete ecosystem for players, coaches, and supporters.
 
 ### **Problem**
 Teams often rely on manual paperwork or scattered tools to track performance and manage fan engagement. This makes it hard to analyze player progress, prepare strategies, and build a professional brand.
